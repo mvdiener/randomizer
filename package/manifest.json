@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Spotify Random Album Selector",
+  "description": "Picks a random Spotify album to play when current tab is navigated to https://open.spotify.com/collection/albums.",
+  "version": "0.0.0.2",
+
+  "background": {
+    "scripts": [
+      "randomPlay.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "shuffle16.png"
+  },
+  "icons": {
+    "16": "shuffle16.png",
+    "48": "shuffle48.png",
+    "128": "shuffle128.png" 
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
