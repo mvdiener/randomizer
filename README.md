@@ -5,6 +5,14 @@ The caveat is that this script only interacts with the albums currently loaded o
 
 As of 0.0.0.3, there is an option in the right click menu to reorder the albums by artist, since Spotify changed the ordering for some unknown reason. This has the same caveat as above, and only interacts with the albums loaded on the page.
 
+0.0.0.5 adds a right click option to scroll to the bottom of your album list for you.
+
+## Version 0.0.0.5
+Added right click option to first scroll to the bottom of the album list before ordering albums by artist
+
+## Version 0.0.0.4
+Updated tags due to changes on spotify's front end
+
 ## Version 0.0.0.3
 Added right click option to order albums by artist
 
