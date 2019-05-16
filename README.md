@@ -7,6 +7,9 @@ As of 0.0.0.3, there is an option in the right click menu to reorder the albums 
 
 0.0.0.5 adds a right click option to scroll to the bottom of your album list for you.
 
+## Version 0.0.0.6
+Fixed scrolling function due to changes on spotify's front end
+
 ## Version 0.0.0.5
 Added right click option to first scroll to the bottom of the album list before ordering albums by artist
 

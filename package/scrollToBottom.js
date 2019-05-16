@@ -1,29 +1,36 @@
 if (window.location.href == "https://open.spotify.com/collection/albums") {
-    var currentHeight = document.body.scrollHeight;
-    var scrollAttempts = 0;
+    var scrollDiv = document.getElementsByClassName("main-view-container__scroll-node")[0];
+    var scrollDivChild = document.getElementsByClassName("main-view-container__scroll-node-child")[0];
+    if (scrollDiv && scrollDivChild) {
+        var scrollAttempts = 0;
+        var currentHeight = scrollDivChild.scrollHeight;
 
-    var scroll = setInterval(function () {
-        if (scrollAttempts < 5) {
-            window.scrollTo(0, currentHeight);
-            if (currentHeight === document.body.scrollHeight) {
-                scrollAttempts++;
+        var scroll = setInterval(function () {
+            scrollDiv.scrollTop = scrollDivChild.scrollHeight;
+            if (scrollAttempts < 5) {
+                if (currentHeight === scrollDivChild.scrollHeight) {
+                    scrollAttempts++;
+                }
+                else {
+                    currentHeight = scrollDivChild.scrollHeight;
+                    scrollAttempts = 0;
+                }
             }
             else {
-                currentHeight = document.body.scrollHeight;
-                scrollAttempts = 0;
+                clearInterval(scroll);
+                console.log("Randomizer extension: Scrolled to bottom. Ordering albums...");
+                orderAlbums();
             }
-        }
-        else {
-            clearInterval(scroll);
-            orderAlbums();
-        }
-    }, 1000);
+        }, 1000);
 
-    scroll;
+        scroll;
+    }
+    else {
+        console.log("Randomizer extension: Cannot find correct divs for scrolling function.");
+    }
 }
 
 function orderAlbums() {
-    console.log('why am i here');
     var albumElement = document.querySelectorAll('.container-fluid--noSpaceAround')[0].children[0];
     var albumArray = Array.from(albumElement.children);
     var sortedArray = albumArray.sort(function (a, b) {
