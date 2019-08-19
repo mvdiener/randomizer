@@ -11,6 +11,6 @@ if (window.location.href == "https://open.spotify.com/collection/albums") {
     })
 
     for (i = 0; i < sortedArray.length; i++) {
-        albumElement.parentNode.appendChild(sortedArray[i])
+        albumElement.appendChild(sortedArray[i])
     }
 }
