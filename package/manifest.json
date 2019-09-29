@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Spotify Random Album Selector",
+    "name": "Random Album Selector",
     "description": "Picks a random Spotify album to play when current tab is navigated to https://open.spotify.com/collection/albums.",
-    "version": "0.0.0.7",
+    "version": "0.0.0.8",
     "background": {
         "scripts": [
             "main.js",
